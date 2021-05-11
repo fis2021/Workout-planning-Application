@@ -38,6 +38,7 @@ public class LoginController
         Stage primary = (Stage) registrationMessage.getScene().getWindow();
 
         try {
+
             String role = getUserRole(usernameField.getText(), passwordField.getText());
             User.setCurrentUser(usernameField.getText());
             if(role.equals("Client")){

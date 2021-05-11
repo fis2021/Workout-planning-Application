@@ -2,7 +2,8 @@ package org.loose.fis.sre.model;
 
 import org.dizitart.no2.objects.Id;
 
-public class User {
+public class User
+{
     @Id
     private String username;
     private String password;

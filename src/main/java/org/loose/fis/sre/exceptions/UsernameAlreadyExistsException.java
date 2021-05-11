@@ -1,6 +1,7 @@
 package org.loose.fis.sre.exceptions;
 
-public class UsernameAlreadyExistsException extends Exception {
+public class UsernameAlreadyExistsException extends Exception
+{
 
     private String username;
 

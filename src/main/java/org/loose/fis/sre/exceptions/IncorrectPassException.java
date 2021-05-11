@@ -1,6 +1,7 @@
 package org.loose.fis.sre.exceptions;
 
-public class IncorrectPassException extends AccException {
+public class IncorrectPassException extends AccException
+{
 
     private String password;
 

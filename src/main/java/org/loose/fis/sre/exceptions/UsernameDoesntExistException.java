@@ -1,6 +1,7 @@
 package org.loose.fis.sre.exceptions;
 
-public class UsernameDoesntExistException extends AccException{
+public class UsernameDoesntExistException extends AccException
+{
 
     private String username;
 
