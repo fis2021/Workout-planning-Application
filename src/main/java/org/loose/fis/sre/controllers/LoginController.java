@@ -48,7 +48,7 @@ public class LoginController
             }
             else
             if(role.equals("Couch")){
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("couch.fxml"));
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("pcouch.fxml"));
                 Scene nextScene = new Scene(root, 800, 600);
 
                 primary.setScene(nextScene);
