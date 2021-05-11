@@ -16,7 +16,8 @@ package org.loose.fis.sre.controllers;
         import static org.loose.fis.sre.services.UserService.getUserRole;
 
 
-public class LoginController {
+public class LoginController
+{
 
     public Button loginButton;
     @FXML
@@ -47,7 +48,7 @@ public class LoginController {
             }
             else
             if(role.equals("Couch")){
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("pcouch.fxml"));
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("couch.fxml"));
                 Scene nextScene = new Scene(root, 800, 600);
 
                 primary.setScene(nextScene);
