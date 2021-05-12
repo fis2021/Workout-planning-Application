@@ -10,6 +10,7 @@ import org.loose.fis.sre.services.UserService;
 
 public class RegistrationController {
 
+
     @FXML
     private Text registrationMessage;
     @FXML
