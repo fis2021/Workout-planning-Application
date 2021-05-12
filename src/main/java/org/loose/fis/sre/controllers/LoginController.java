@@ -39,6 +39,7 @@ public class LoginController
 
         try {
 
+
             String role = getUserRole(usernameField.getText(), passwordField.getText());
             User.setCurrentUser(usernameField.getText());
             if(role.equals("Client")){
