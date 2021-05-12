@@ -12,10 +12,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import org.loose.fis.sre.model.ProgramName;
 import org.loose.fis.sre.services.ProgramService;
-
 import java.util.Objects;
 
-public class ClientVPController {
+public class ClientProgressController {
 
     @FXML
     private TableView<ProgramName> programTable;
@@ -36,24 +35,6 @@ public class ClientVPController {
 
     }
 
-    public void handleEnrollButtonAction() throws Exception {
-        Stage window = (Stage) programTable.getScene().getWindow();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ClientEnroll.fxml")));
-        window.setScene(new Scene(root, 600,600));
-    }
-
-    public void handleProgressButtonAction() {
-        Stage window = (Stage) programTable.getScene().getWindow();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ClientProgress.fxml")));
-        window.setScene(new Scene(root, 600,600));
-    }
-
-    public void handleWorkoutButtonAction() {
-        Stage window = (Stage) programTable.getScene().getWindow();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ClientWorkout.fxml")));
-        window.setScene(new Scene(root, 600,600));
-    }
-
     public void handleHomeButtonAction() {
         Stage window = (Stage) programTable.getScene().getWindow();
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("Home.fxml")));
@@ -70,6 +51,12 @@ public class ClientVPController {
         Stage window = (Stage) programTable.getScene().getWindow();
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ClientViewRatings.fxml")));
         window.setScene(new Scene(root, 600,600));
+    }
+
+    public void handleBackButtonAction() throws Exception{
+        Stage window = (Stage) programTable.getScene().getWindow();
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("ClientViewPrograms.fxml")));
+        window.setScene(new Scene(root, 800,600));
     }
 
     private ObservableList<ProgramName> categories = FXCollections.observableArrayList(ProgramService.programNames());
