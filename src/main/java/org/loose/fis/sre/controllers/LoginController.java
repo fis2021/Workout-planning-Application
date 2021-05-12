@@ -39,17 +39,18 @@ public class LoginController
 
         try {
 
+
             String role = getUserRole(usernameField.getText(), passwordField.getText());
             User.setCurrentUser(usernameField.getText());
             if(role.equals("Client")){
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("pclient.fxml"));
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("pClient.fxml"));
                 Scene nextScene = new Scene(root, 800, 600);
 
                 primary.setScene(nextScene);
             }
             else
             if(role.equals("Couch")){
-                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("pcouch.fxml"));
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("pCouch.fxml"));
                 Scene nextScene = new Scene(root, 800, 600);
 
                 primary.setScene(nextScene);
