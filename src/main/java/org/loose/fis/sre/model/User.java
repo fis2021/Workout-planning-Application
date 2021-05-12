@@ -2,11 +2,13 @@ package org.loose.fis.sre.model;
 
 import org.dizitart.no2.objects.Id;
 
-public class User {
+public class User
+{
     @Id
     private String username;
     private String password;
     private String role;
+    private static String currentUser;
 
     public User(String username, String password, String role) {
         this.username = username;
@@ -39,6 +41,14 @@ public class User {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public static String getCurrentUser(){
+        return currentUser;
+    }
+
+    public static void setCurrentUser(String user){
+        currentUser=user;
     }
 
     @Override
