@@ -18,33 +18,33 @@ package org.loose.fis.sre.controllers;
 public class ViewProgramsController {
 
     @FXML
-    private TableView<ProgramName> productTable;
+    private TableView<ProgramName> programTable;
     @FXML
-    private TableColumn<ProgramName, String> productNameColumn;
+    private TableColumn<ProgramName, String> programNameColumn;
     @FXML
-    private TableColumn<ProgramName, String> categoryColumn;
+    private TableColumn<ProgramName, String> intensityColumn;
     @FXML
-    private TableColumn<ProgramName, Integer> productPriceColumn;
+    private TableColumn<ProgramName, Integer> programDurationColumn;
 
 
     public void initialize() {
-        productNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        categoryColumn.setCellValueFactory(new PropertyValueFactory<>("category"));
-        productPriceColumn.setCellValueFactory(new PropertyValueFactory<>("price"));
+        programNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
+        intensityColumn.setCellValueFactory(new PropertyValueFactory<>("intensity"));
+        programDurationColumn.setCellValueFactory(new PropertyValueFactory<>("duration"));
 
-        productTable.setItems(categories);
+        programTable.setItems(categories);
 
     }
 
     public void handleAddButtonAction() throws Exception{
-        Stage window = (Stage) productTable.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("addProduct.fxml"));
+        Stage window = (Stage) programTable.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("addPrograms.fxml"));
         window.setScene(new Scene(root, 800,600));
     }
 
     public void handleDeleteNameButtonAction() {
         ObservableList<ProgramName> categoriesSelected;
-        categoriesSelected = productTable.getSelectionModel().getSelectedItems();
+        categoriesSelected = programTable.getSelectionModel().getSelectedItems();
         for(ProgramName productName : categoriesSelected) {
             ProgramService.removeName(productName);
         }
@@ -55,11 +55,11 @@ public class ViewProgramsController {
 
 
     public void handleBackButtonAction() throws Exception{
-        Stage window = (Stage) productTable.getScene().getWindow();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("pageManager.fxml")));
+        Stage window = (Stage) programTable.getScene().getWindow();
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("pCoach.fxml")));
         window.setScene(new Scene(root, 800,600));
     }
 
-    private ObservableList<ProgramName> categories = FXCollections.observableArrayList(ProgramService.productNames());
+    private ObservableList<ProgramName> categories = FXCollections.observableArrayList(ProgramService.programNames());
 
 }

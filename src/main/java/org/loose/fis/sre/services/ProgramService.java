@@ -16,43 +16,43 @@ package org.loose.fis.sre.services;
 
 public class ProgramService {
 
-    private static ObjectRepository<ProgramName> productNameRepository;
+    private static ObjectRepository<ProgramName> programNameRepository;
 
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("product-name.db").toFile())
+                .filePath(getPathToFile("program-name.db").toFile())
                 .openOrCreate("test", "test");
 
-        productNameRepository = database.getRepository(ProgramName.class);
+        programNameRepository = database.getRepository(ProgramName.class);
     }
 
-    public static void addName(String  name, String category,int price) throws ProgramAlreadyExistsException {
+    public static void addName(String  name, String intensity,int duration) throws ProgramAlreadyExistsException {
         checkNameDoesNotAlreadyExist(name);
-        productNameRepository.insert(new ProgramName(name,category, price));
+        programNameRepository.insert(new ProgramName(name,intensity, duration));
     }
 
-    public static void removeName(ProgramName productName) {
-        productNameRepository.remove(eq("name",productName.getName()));
+    public static void removeName(ProgramName programName) {
+        programNameRepository.remove(eq("name",programName.getName()));
     }
 
     public static void checkNameDoesNotAlreadyExist(String name) throws ProgramAlreadyExistsException {
-        for (ProgramName productName : productNameRepository.find()) {
-            if (Objects.equals(name, productName.getName()))
+        for (ProgramName programName : programNameRepository.find()) {
+            if (Objects.equals(name, programName.getName()))
                 throw new ProgramAlreadyExistsException(name);
         }
     }
 
-    public static ArrayList<ProgramName> productNames() {
+    public static ArrayList<ProgramName> programNames() {
         ArrayList<ProgramName> list = new ArrayList<>();
-        for(ProgramName productName : productNameRepository.find()) {
-            list.add(productName);
+        for(ProgramName programName : programNameRepository.find()) {
+            list.add(programName);
         }
         return list;
     }
 
 
     public static ProgramName getProductName(String name){
-        for(ProgramName productName : productNameRepository.find())
+        for(ProgramName productName : programNameRepository.find())
             if(Objects.equals(name, productName.getName()))
                 return productName;
         return null;

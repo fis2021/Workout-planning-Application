@@ -30,9 +30,9 @@
             <center>
                 <TableView fx:id="typeTable" prefHeight="370.0" prefWidth="648.0" BorderPane.alignment="CENTER">
                     <columns>
-                        <TableColumn fx:id="productNameColumn" prefWidth="273.60000002384186" text="Name" />
-                        <TableColumn fx:id="productCategoryColumn" prefWidth="224.0" text="Intensity" />
-                        <TableColumn fx:id="productPriceColumn" prefWidth="114.19998168945312" text="Duration" />
+                        <TableColumn fx:id="programNameColumn" prefWidth="273.60000002384186" text="Name" />
+                        <TableColumn fx:id="intensityColumn" prefWidth="224.0" text="Intensity" />
+                        <TableColumn fx:id="programDurationColumn" prefWidth="114.19998168945312" text="Duration" />
                     </columns>
                 </TableView>
             </center>
@@ -50,6 +50,7 @@
             <Font size="12.0" />
         </font>
     </Button>
+
     <Button mnemonicParsing="false" onAction="#handleDeleteNameButtonAction" prefWidth="150.0" text="Delete">
         <font>
             <Font size="12.0" />
