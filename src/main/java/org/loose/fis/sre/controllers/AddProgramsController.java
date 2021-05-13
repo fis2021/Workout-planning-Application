@@ -15,24 +15,24 @@ package org.loose.fis.sre.controllers;
 public class AddProgramsController {
 
     @FXML
-    private ChoiceBox category;
+    private ChoiceBox intensity;
 
     @FXML
     private TextField name;
 
-    @FXML
-    private TextField price;
 
+    @FXML
+    private TextField duration;
 
     @FXML
     public void initialize() {
-        category.getItems().addAll("", "", "");
+        intensity.getItems().addAll("Beginner", "Medium", "High-intensity");
     }
 
     public void handleAddButtonAction() throws  IOException {
 
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("viewProductsManager.fxml"));
-        Stage window = (Stage) category.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Coach_viewPrograms.fxml"));
+        Stage window = (Stage) intensity.getScene().getWindow();
         window.setScene(new Scene(root, 800, 600));
 
     }
@@ -40,8 +40,8 @@ public class AddProgramsController {
 
     public void handleCancelButtonAction() throws Exception{
 
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("viewProductsManager.fxml"));
-        Stage window = (Stage) category.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("Coach_viewPrograms.fxml"));
+        Stage window = (Stage) intensity.getScene().getWindow();
         window.setScene(new Scene(root, 800, 600));
     }
 

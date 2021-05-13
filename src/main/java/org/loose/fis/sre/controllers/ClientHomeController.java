@@ -4,10 +4,10 @@ import org.loose.fis.sre.Main;
 
 import java.io.IOException;
 
-public class ClientVPController {
+public class ClientHomeController {
 
-    public void handleBackButton() throws IOException{
+    public void handleLogoutButton() throws IOException{
         Main x = new Main();
-        x.changeWindow("ClientHome.fxml");
+        x.changeWindow("login.fxml");
     }
 }

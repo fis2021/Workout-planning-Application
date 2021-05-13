@@ -8,18 +8,20 @@ import javafx.stage.Stage;
 import org.loose.fis.sre.services.FileSystemService;
 import org.loose.fis.sre.services.UserService;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class Main extends Application {
 
+    private static Stage stage;
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) throws IOException {
         initDirectory();
         UserService.initDatabase();
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("register.fxml"));
-        primaryStage.setTitle("Registration Example");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        stage = primaryStage;
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+        primaryStage.setScene(new Scene(root, 600, 400));
         primaryStage.show();
     }
 
@@ -29,6 +31,11 @@ public class Main extends Application {
             applicationHomePath.toFile().mkdirs();
     }
 
+    public void changeWindow(String fxml) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource(fxml));
+        stage.setScene(new Scene(root, 600,400));
+        stage.getScene().setRoot(root);
+    }
 
     public static void main(String[] args) {
         launch(args);

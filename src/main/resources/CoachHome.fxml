@@ -21,17 +21,17 @@
             <Font name="Impact" size="38.0" />
         </font>
     </Text>
-    <Button fx:id="addprogramsButton" contentDisplay="TOP" layoutX="242.0" layoutY="207.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="149.0" style="-fx-background-color: #8a4242;" text="Add Programs" textAlignment="RIGHT" textFill="WHITE">
-        <font>
-            <Font name="Times New Roman" size="20.0" />
-        </font>
-    </Button>
     <Button fx:id="listofclientsButton" layoutX="242.0" layoutY="150.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="List of clients" textFill="WHITE">
         <font>
             <Font name="Times New Roman" size="20.0" />
         </font>
     </Button>
-    <Button fx:id="seeprogressButton" layoutX="243.0" layoutY="267.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Progress" textFill="#fff7f7">
+    <Button fx:id="addprogramsButton" layoutX="242.0" layoutY="208.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Add programs" textFill="WHITE">
+        <font>
+            <Font name="Times New Roman" size="20.0" />
+        </font>
+    </Button>
+    <Button fx:id="seeprogressButton" layoutX="243.0" layoutY="267.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Progress" textFill="WHITE">
         <font>
             <Font name="Times New Roman" size="20.0" />
         </font>
