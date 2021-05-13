@@ -1,39 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ClientProgressController">
+<AnchorPane prefHeight="400.0"  prefWidth="600.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ClientProgressController">
     <children>
-        <ImageView fitHeight="400.0" fitWidth="620.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="-1.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@Images/background1.jpg" />
+                <Image url="@Images/a.jpg" />
             </image>
         </ImageView>
-        <HBox prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #faebd7;">
-            <children>
-                <Button mnemonicParsing="false" onAction="#handleHomeButtonAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #deb887; -fx-font-size: 16; -fx-font-style: Italic; -fx-border-color: #daa520;" text="Home">
-                    <HBox.margin>
-                        <Insets left="75.0" />
-                    </HBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#handleCoachesButtonAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #deb887; -fx-font-size: 16; -fx-font-style: Italic; -fx-border-color: #daa520;" text="Coaches">
-                    <HBox.margin>
-                        <Insets left="75.0" right="75.0" />
-                    </HBox.margin></Button>
-                <Button mnemonicParsing="false" onAction="#handleRatingsButtonAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #deb887; -fx-font-size: 16; -fx-font-style: Italic; -fx-border-color: #daa520;" text="Ratings" />
-            </children></HBox>
-        <TableView layoutX="100.0" layoutY="100.0" prefHeight="200.0" prefWidth="400.0">
+        <Text fill="#400e0e" layoutX="72.5" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What about your progress?" textAlignment="CENTER" wrappingWidth="455.0">
+            <font>
+                <Font name="Impact" size="38.0" />
+            </font>
+        </Text>
+        <TableView layoutX="50.0" layoutY="135.0" prefHeight="200.0" prefWidth="500.0">
             <columns>
-                <TableColumn prefWidth="200.0" text="Program name" />
-                <TableColumn prefWidth="200.0" text="Progress" />
+                <TableColumn prefWidth="166.0" text="Program" />
+                <TableColumn prefWidth="166.0" text="Coach" />
+            <TableColumn prefWidth="166.0" text="Progress" />
             </columns>
         </TableView>
-      <Button layoutX="450.0" layoutY="346.0" onAction="#handleBackButtonAction" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Back">
+      <Button layoutX="450.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE">
          <font>
-            <Font size="14.0" />
+            <Font name="Times New Roman" size="16.0" />
          </font></Button>
     </children>
 </AnchorPane>
