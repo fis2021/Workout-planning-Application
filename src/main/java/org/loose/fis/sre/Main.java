@@ -20,8 +20,8 @@ public class Main extends Application {
         initDirectory();
         UserService.initDatabase();
         stage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-        primaryStage.setScene(new Scene(root, 600, 400));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("ClientHome.fxml"));
+        primaryStage.setScene(new Scene(root, 800, 600));
         primaryStage.show();
     }
 
@@ -32,8 +32,8 @@ public class Main extends Application {
     }
 
     public void changeWindow(String fxml) throws IOException{
-        Parent root = FXMLLoader.load(getClass().getResource(fxml));
-        stage.setScene(new Scene(root, 600,400));
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource(fxml));
+        stage.setScene(new Scene(root, 800,600));
         stage.getScene().setRoot(root);
     }
 
