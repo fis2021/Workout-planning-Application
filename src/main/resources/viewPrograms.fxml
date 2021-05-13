@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 
-<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ViewProgramsController">
-<Button mnemonicParsing="false" onAction="#handleBackButtonAction" text="Back">
-    <VBox.margin>
-        <Insets left="15.0" top="15.0" />
-    </VBox.margin>
-</Button>
-<AnchorPane>
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ViewProgramsController">
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/11.0.1">
+
     <children>
-        <BorderPane prefHeight="480.0" prefWidth="681.0">
+        <BorderPane layoutX="36.0" prefHeight="600.0" prefWidth="740.0">
             <padding>
                 <Insets bottom="50.0" left="50.0" right="20.0" top="30.0" />
             </padding>
             <top>
-                <Label alignment="CENTER" prefHeight="5.0" prefWidth="260.0" text="Programs" BorderPane.alignment="CENTER">
+                <Text fill="#400e0e" layoutX="39.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="List of Programs:" wrappingWidth="407.4625244140625">
                     <font>
-                        <Font size="20.0" />
+                        <Font name="Impact" size="38.0" />
                     </font>
-                </Label>
+                </Text>
             </top>
             <center>
-                <TableView fx:id="typeTable" prefHeight="370.0" prefWidth="648.0" BorderPane.alignment="CENTER">
+                <TableView fx:id="typeTable" prefHeight="370.0" prefWidth="642.0" BorderPane.alignment="CENTER">
                     <columns>
                         <TableColumn fx:id="programNameColumn" prefWidth="273.60000002384186" text="Name" />
                         <TableColumn fx:id="intensityColumn" prefWidth="224.0" text="Intensity" />
@@ -37,25 +31,43 @@
                 </TableView>
             </center>
         </BorderPane>
-        <BorderPane layoutX="410.0" layoutY="6.0" prefHeight="480.0" prefWidth="400.0">
+        <BorderPane layoutX="281.0" layoutY="6.0" prefHeight="581.0" prefWidth="531.0">
             <padding>
                 <Insets bottom="50.0" left="20.0" right="50.0" top="30.0" />
             </padding>
+
+            
+            <bottom>
+            <Button fx:id="handleDeleteNameButtonAction" mnemonicParsing="false" onAction="#handleDeleteNameButtonAction" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Delete" textFill="WHITE" BorderPane.alignment="CENTER">
+                <font>
+                    <Font name="Times New Roman" size="20.0" />
+                </font>
+            </Button>
+
+            </bottom>
+
         </BorderPane>
+        <BorderPane layoutX="-120.0" layoutY="6.0" prefHeight="582.0" prefWidth="917.0">
+            <padding>
+                <Insets bottom="50.0" left="20.0" right="50.0" top="30.0" />
+            </padding>
+
+
+                <bottom>
+                    <Button fx:id="handleAddButtonAction" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE" BorderPane.alignment="CENTER">
+                        <font>
+                            <Font name="Times New Roman" size="20.0" />
+                        </font>
+                    </Button>
+                </bottom>
+
+
+
+        </BorderPane>
+
     </children>
 </AnchorPane>
-<HBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="800.0" style="-fx-spacing: 50;">
-    <Button mnemonicParsing="false" onAction="#handleAddButtonAction" prefWidth="150.0" text="Add">
-        <font>
-            <Font size="12.0" />
-        </font>
-    </Button>
+    <HBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="800.0" style="-fx-spacing: 50;">
 
-    <Button mnemonicParsing="false" onAction="#handleDeleteNameButtonAction" prefWidth="150.0" text="Delete">
-        <font>
-            <Font size="12.0" />
-        </font>
-    </Button>
-
-</HBox>
+    </HBox>
 </VBox>
