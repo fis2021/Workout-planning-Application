@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.loose.fis</groupId>
-    <artifactId>simple-registration-example</artifactId>
+    <artifactId>Workout-planning-Aplication-final</artifactId>
     <version>0.1.0-SNAPSHOT</version>
 
     <properties>
@@ -55,9 +55,9 @@
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
-                <version>0.0.5</version>
+                <version>0.0.4</version>
                 <configuration>
-                    <mainClass>${main.class.name}</mainClass>
+                    <mainClass>org.loose.fis.sre.Main</mainClass>
                 </configuration>
             </plugin>
         </plugins>
