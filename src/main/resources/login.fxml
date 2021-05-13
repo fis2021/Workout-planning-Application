@@ -5,28 +5,44 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="CENTER" hgap="10" prefHeight="400" prefWidth="600" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LoginController">
+<GridPane alignment="CENTER" hgap="10" prefHeight="400" prefWidth="600" style="-fx-background-color: #9f6060;" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.LoginController">
     <padding>
     <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
 </padding>
-<Text id="title-text" text="Workout Planning Application" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
-    <font>
-        <Font size="33.0" />
-    </font></Text>
 
-<Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <Text fill="#400e0e" layoutX="39.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Workout Planning" wrappingWidth="407.4625244140625">
+        <font>
+            <Font name="Impact" size="38.0" />
+        </font>
+    </Text>
 
-<TextField fx:id="usernameField" prefHeight="26.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+<Label prefHeight="80.0" prefWidth="111.0" text="Username:" textFill="#400e0e" GridPane.columnIndex="0" GridPane.rowIndex="1">
+      <font>
+         <Font name="Times New Roman" size="18.0" />
+      </font></Label>
 
-<Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+<TextField fx:id="usernameField" opacity="0.5" prefHeight="26.0" prefWidth="270.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
 
-<PasswordField fx:id="passwordField" prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+<Label prefHeight="51.0" prefWidth="62.0" text="Password:" textFill="#400e0e" GridPane.columnIndex="0" GridPane.rowIndex="2">
+      <font>
+         <Font name="Times New Roman" size="18.0" />
+      </font></Label>
+
+<PasswordField fx:id="passwordField" opacity="0.5" prefHeight="26.0" prefWidth="210.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
 
 <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="7" />
 <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="0" GridPane.rowIndex="5" />
 <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
-    <Button fx:id="loginButton" onAction="#handleLoginAction" prefHeight="26.0" prefWidth="123.0" text="Log in" />
-    <Button fx:id="createAccountButton" onAction="#handleCreateAccountAction" prefHeight="26.0" prefWidth="150.0" text="Create an account" />
+    <Button fx:id="loginButton" layoutX="243.0" layoutY="327.0" onAction="#handleLoginAction" prefHeight="46.0" prefWidth="167.0" style="-fx-background-color: #8a4242;" text="Log in" textFill="#f0f0f0">
+        <font>
+            <Font name="Times New Roman" size="21.0" />
+        </font>
+    </Button>
+    <Button fx:id="createAccountButton" layoutX="243.0" layoutY="327.0" onAction="#handleCreateAccountAction" prefHeight="46.0" prefWidth="250.0" style="-fx-background-color: #8a4242;" text="Create an account" textFill="#f0f0f0">
+        <font>
+            <Font name="Times New Roman" size="21.0" />
+        </font>
+    </Button>
 </HBox>
 <columnConstraints>
     <ColumnConstraints maxWidth="118.19999999999999" minWidth="61.19999999999999" prefWidth="61.19999999999999" />
