@@ -10,4 +10,5 @@ public class ClientProgressController {
         Main x = new Main();
         x.changeWindow("ClientHome.fxml");
     }
+
 }
