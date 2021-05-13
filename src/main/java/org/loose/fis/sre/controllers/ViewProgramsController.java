@@ -37,6 +37,7 @@ public class ViewProgramsController {
     }
 
 
+
     public void handleAddButtonAction() throws Exception{
         Stage window = (Stage) programTable.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("addPrograms.fxml"));
