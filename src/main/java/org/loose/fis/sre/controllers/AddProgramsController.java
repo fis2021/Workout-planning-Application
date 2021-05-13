@@ -8,7 +8,7 @@ package org.loose.fis.sre.controllers;
         import javafx.scene.control.TextField;
         import javafx.stage.Stage;
         import org.loose.fis.sre.exceptions.ProgramAlreadyExistsException;
-        import org.loose.fis.sre.services.ProductNameService;
+        import org.loose.fis.sre.services.ProgramService;
 
         import java.io.IOException;
 
