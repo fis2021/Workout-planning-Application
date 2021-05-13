@@ -4,8 +4,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ClientVPController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ClientProgressController">
     <children>
         <ImageView fitHeight="400.0" fitWidth="620.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -24,15 +25,15 @@
                     </HBox.margin></Button>
                 <Button mnemonicParsing="false" onAction="#handleRatingsButtonAction" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #deb887; -fx-font-size: 16; -fx-font-style: Italic; -fx-border-color: #daa520;" text="Ratings" />
             </children></HBox>
-      <TableView layoutX="75.0" layoutY="74.0" prefHeight="200.0" prefWidth="450.0">
-        <columns>
-          <TableColumn prefWidth="150.0" text="Name" />
-          <TableColumn prefWidth="150.0" text="Coach" />
-            <TableColumn prefWidth="150.0" text="Intensity" />
-        </columns>
-      </TableView>
-      <Button onAction="#handleEnrollButtonAction" blendMode="DARKEN" layoutX="75.0" layoutY="306.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-font-size: 14; -fx-border-color: black;" text="Enroll" />
-      <Button onAction="#handleProgressButtonAction" blendMode="DARKEN" layoutX="425.0" layoutY="306.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-font-size: 14; -fx-border-color: black;" text="Progress" />
-      <Button onAction="#handleWorkoutButtonAction" blendMode="DARKEN" layoutX="250.0" layoutY="306.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" style="-fx-border-color: black; -fx-font-size: 14;" text="Workout" />
+        <TableView layoutX="100.0" layoutY="100.0" prefHeight="200.0" prefWidth="400.0">
+            <columns>
+                <TableColumn prefWidth="200.0" text="Program name" />
+                <TableColumn prefWidth="200.0" text="Progress" />
+            </columns>
+        </TableView>
+      <Button layoutX="450.0" layoutY="346.0" onAction="#handleBackButtonAction" mnemonicParsing="false" prefHeight="40.0" prefWidth="100.0" text="Back">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
     </children>
 </AnchorPane>
