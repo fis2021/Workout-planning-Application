@@ -21,12 +21,7 @@
                 <Font name="Impact" size="38.0" />
             </font>
         </Text>
-        <Button layoutX="225.0" layoutY="320.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Coach rating" textFill="#fff7f7">
-            <font>
-                <Font name="Times New Roman" size="20.0" />
-            </font>
-        </Button>
-    <Button layoutX="225.0" layoutY="125.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Programs" textFill="WHITE">
+    <Button layoutX="225.0" layoutY="150.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Programs" textFill="WHITE">
         <font>
             <Font name="Times New Roman" size="20.0" />
         </font>
@@ -36,7 +31,7 @@
             <Font name="Times New Roman" size="20.0" />
         </font>
     </Button>
-        <Button layoutX="225.0" layoutY="255.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Progress" textFill="#fff7f7">
+        <Button layoutX="225.0" layoutY="289.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="My progress" textFill="#fff7f7">
             <font>
                 <Font name="Times New Roman" size="20.0" />
             </font>
