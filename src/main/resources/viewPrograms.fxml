@@ -57,7 +57,7 @@
 
 
                 <bottom>
-                    <Button fx:id="handleAddButtonAction" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="45.0" prefWidth="147.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE" BorderPane.alignment="CENTER">
+                    <Button fx:id="handleAddButtonAction" mnemonicParsing="false" onAction="#handleAddPrograms" prefHeight="45.0" prefWidth="147.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE" BorderPane.alignment="CENTER">
                         <font>
                             <Font name="Times New Roman" size="20.0" />
                         </font>

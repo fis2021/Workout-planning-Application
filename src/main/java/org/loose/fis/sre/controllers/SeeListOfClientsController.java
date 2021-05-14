@@ -10,9 +10,11 @@ package org.loose.fis.sre.controllers;
         import javafx.scene.control.TableView;
         import javafx.scene.control.cell.PropertyValueFactory;
         import javafx.stage.Stage;
+        import org.loose.fis.sre.Main;
         import org.loose.fis.sre.model.ProgramName;
         import org.loose.fis.sre.services.ProgramService;
 
+        import java.io.IOException;
         import java.util.Objects;
 
 public class SeeListOfClientsController {
@@ -43,6 +45,11 @@ public class SeeListOfClientsController {
         Stage window = (Stage) programTable.getScene().getWindow();
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("CoachHome.fxml")));
         window.setScene(new Scene(root, 800,600));
+    }
+
+    public void handleBackClientsButton() throws IOException {
+        Main x = new Main();
+        x.changeWindow("CoachHome.fxml");
     }
 
     private ObservableList<ProgramName> categories = FXCollections.observableArrayList(ProgramService.programNames());
