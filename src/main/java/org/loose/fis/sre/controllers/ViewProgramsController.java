@@ -59,7 +59,7 @@ public class ViewProgramsController {
 
     public void handleBackButtonAction() throws Exception{
         Stage window = (Stage) programTable.getScene().getWindow();
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("pCoach.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("CoachHome.fxml")));
         window.setScene(new Scene(root, 800,600));
     }
 
