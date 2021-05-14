@@ -10,4 +10,14 @@ public class ClientHomeController {
         Main x = new Main();
         x.changeWindow("login.fxml");
     }
+
+    public void handleProgressButton() throws IOException{
+        Main x = new Main();
+        x.changeWindow("ClientProgress.fxml");
+    }
+
+    public void handleProgramsButton() throws IOException{
+        Main x = new Main();
+        x.changeWindow("ClientViewPrograms.fxml");
+    }
 }

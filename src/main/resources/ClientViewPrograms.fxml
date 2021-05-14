@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ClientProgressController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ClientVPController">
     <children>
         <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="-1.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -28,5 +28,15 @@
             <font>
                 <Font name="Times New Roman" size="16.0" />
             </font></Button>
+        <Button layoutX="50.0" layoutY="388.0" mnemonicParsing="false" onAction="#handleWorkoutButton" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Workout" textFill="#fff7f7">
+            <font>
+                <Font name="Times New Roman" size="20.0" />
+            </font>
+        </Button>
+        <Button layoutX="248.0" layoutY="388.0" mnemonicParsing="false" onAction="#handleEnrollButton" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Enroll" textFill="#fff7f7">
+            <font>
+                <Font name="Times New Roman" size="20.0" />
+            </font>
+        </Button>
     </children>
 </AnchorPane>

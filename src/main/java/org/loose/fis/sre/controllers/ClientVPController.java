@@ -10,4 +10,14 @@ public class ClientVPController {
         Main x = new Main();
         x.changeWindow("ClientHome.fxml");
     }
+
+    public void handleWorkoutButton() throws IOException{
+        Main x = new Main();
+        x.changeWindow("ClientDone.fxml");
+    }
+
+    public void handleEnrollButton() throws IOException{
+        Main x = new Main();
+        x.changeWindow("ClientEnroll.fxml");
+    }
 }
