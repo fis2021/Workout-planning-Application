@@ -34,7 +34,7 @@
                 <Insets bottom="50.0" left="20.0" right="50.0" top="30.0" />
             </padding>
             <bottom>
-                <Button fx:id="handleRemoveClientsButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Remove client" textFill="WHITE" BorderPane.alignment="CENTER">
+                <Button  mnemonicParsing="false" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Remove client" textFill="WHITE" BorderPane.alignment="CENTER">
                  <font>
                      <Font name="Times New Roman" size="20.0" />
                  </font>
@@ -46,7 +46,7 @@
                 <Insets bottom="50.0" left="20.0" right="50.0" top="30.0" />
             </padding>
             <bottom>
-                <Button fx:id="handleBackClientsButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE" BorderPane.alignment="CENTER">
+                <Button onAction="#handleBackClientsButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE" BorderPane.alignment="CENTER">
                     <font>
                         <Font name="Times New Roman" size="20.0" />
                     </font>
@@ -55,5 +55,6 @@
         </BorderPane>
     </children>
 </AnchorPane>
+
 <HBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="800.0" style="-fx-spacing: 50;" />
 </VBox>
