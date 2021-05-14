@@ -2,10 +2,13 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
 <GridPane alignment="center" hgap="10" prefHeight="400" prefWidth="600" style="-fx-background-color: #9f6060;" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.RegistrationController">
+
+
     <padding>
         <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
     </padding>
@@ -13,8 +16,6 @@
       <font>
          <Font name="Impact" size="36.0" />
       </font></Text>
-
-
     <Label text="Username:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
 
     <TextField fx:id="usernameField" opacity="0.5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
@@ -29,12 +30,24 @@
     </ChoiceBox>
 
     <Text fx:id="registrationMessage" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
-        <Button fx:id="logoutButton" layoutX="225.0" layoutY="385.0" mnemonicParsing="false" onAction="#handleRegisterAction" prefHeight="46.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Register" textFill="#dfd2d2">
+
+    <HBox alignment="bottom_right" prefHeight="67.0" prefWidth="345.0" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <Button alignment="CENTER" layoutX="225.0" layoutY="385.0" mnemonicParsing="false" onAction="#handleRegisterAction" prefHeight="49.0" prefWidth="177.0" style="-fx-background-color: #8a4242;" text="Register" textFill="#dfd2d2">
             <font>
                 <Font name="Times New Roman" size="21.0" />
-            </font></Button>
+            </font>
+        </Button>
+
+         <Button layoutX="225.0" layoutY="385.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="49.0" prefWidth="189.0" style="-fx-background-color: #8a4242;" text="Back" textFill="#dfd2d2">
+                <font>
+                    <Font name="Times New Roman" size="21.0" />
+                </font></Button>
+
     </HBox>
+
+
+
+
 
    <columnConstraints>
       <ColumnConstraints />

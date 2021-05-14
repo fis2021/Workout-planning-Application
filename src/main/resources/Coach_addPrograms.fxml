@@ -43,7 +43,7 @@
 
 <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
 
-    <Button onAction="#handleCancelButtonAction" prefHeight="43.0" prefWidth="120.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE">
+    <Button onAction="#handleBackButton" prefHeight="43.0" prefWidth="120.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE">
         <font>
             <Font name="Times New Roman" size="20.0" />
         </font></Button>
@@ -51,7 +51,7 @@
 </HBox>
 
 <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="4">
-    <Button onAction="#handleAddButtonAction" prefHeight="45.0" prefWidth="116.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE">
+    <Button  prefHeight="45.0" prefWidth="116.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE">
         <font>
             <Font name="Times New Roman" size="20.0" />
         </font></Button>
