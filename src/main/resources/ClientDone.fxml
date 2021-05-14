@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ClientDoneController">
     <children>
-        <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="-1.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="400.0" fitWidth="600.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@Images/a.jpg" />
             </image>
@@ -21,11 +21,16 @@
             <font>
                 <Font name="Times New Roman" size="16.0" />
             </font></Button>
-        <Button layoutX="395.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: #8a4242;" text="Done" textFill="WHITE">
+        <Button layoutX="392.0" layoutY="234.0" mnemonicParsing="false" onAction="#handleDoneButton" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: #8a4242;" text="Done" textFill="WHITE">
             <font>
                 <Font size="18.0" />
             </font>
         </Button>
-      <ChoiceBox layoutX="73.0" layoutY="244.0" prefHeight="50.0" prefWidth="200.0" />
+        <TextField fx:id="done" alignment="CENTER" blendMode="DARKEN" layoutX="122.0" layoutY="317.0" prefHeight="67.0" prefWidth="354.0">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </TextField>
+      <ChoiceBox layoutX="73.0" layoutY="234.0" prefHeight="50.0" prefWidth="200.0" />
     </children>
 </AnchorPane>
