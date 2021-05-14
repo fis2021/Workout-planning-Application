@@ -26,10 +26,15 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="395.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: #8a4242;" text="Enroll" textFill="WHITE">
+      <Button layoutX="395.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleEnrolledButton" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: #8a4242;" text="Enroll" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
+      <TextField fx:id="enroll" alignment="CENTER" blendMode="DARKEN" layoutX="188.0" layoutY="318.0" prefHeight="40.0" prefWidth="223.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
     </children>
 </AnchorPane>
