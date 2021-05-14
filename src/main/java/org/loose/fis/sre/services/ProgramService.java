@@ -51,7 +51,7 @@ public class ProgramService {
     }
 
 
-    public static ProgramName getProductName(String name){
+    public static ProgramName getProgramName(String name){
         for(ProgramName productName : programNameRepository.find())
             if(Objects.equals(name, productName.getName()))
                 return productName;

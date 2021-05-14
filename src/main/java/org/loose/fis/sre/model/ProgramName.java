@@ -4,13 +4,13 @@ package org.loose.fis.sre.model;
 
 public class ProgramName {
     private String name;
-    private String category;
-    private int price;
+    private String intensity;
+    private int duration;
 
-    public ProgramName(String name, String category,int price ) {
+    public ProgramName(String name, String intensity,int duration ) {
         this.name = name;
-        this.category=category;
-        this.price=price;
+        this.intensity=intensity;
+        this.duration=duration;
     }
 
 
@@ -22,34 +22,34 @@ public class ProgramName {
         this.name = name;
     }
 
-    public String getCategory() {
-        return category;
+    public String getIntensity() {
+        return intensity;
     }
 
-    public void setCategory(String name) {
-        this.category = category;
+    public void setIntensity(String name) {
+        this.intensity = intensity;
     }
 
-    public int getPrice() {
-        return price;
+    public int getDuration() {
+        return duration;
     }
 
-    public void setPrice(int price) {
-        this.price=price;
+    public void setDuration(int duration) {
+        this.duration=duration;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        ProgramName productName = (ProgramName) o;
-        if(!Objects.equals(name, productName.name)) return false;
-        return price==0 ? price== productName.price : productName.price==0;
+        ProgramName programName = (ProgramName) o;
+        if(!Objects.equals(name, programName.name)) return false;
+        return duration==0 ? duration== programName.duration : programName.duration==0;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, price);
+        return Objects.hash(name, duration);
     }
 
     public String toString(){
