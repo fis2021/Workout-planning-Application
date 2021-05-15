@@ -34,6 +34,16 @@ public class ClientDoneController {
     public void handleDoneButton() {
         String thisname = User.getCurrentUser();
 
+        if (ProgramService.findClient(ProgramService.getProgramName(prognamefield.getText()),thisname)==-1)
+        {
+            done.setText("You're not enrolled to this program");
+        }
+        else
+        {
+            done.setText(ProgramService.workout(ProgramService.getProgramName(prognamefield.getText()),ProgramService.findClient(ProgramService.getProgramName(prognamefield.getText()),thisname)));
+        }
+        done.setStyle("-fx-text-fill: red");
+
     }
 
 

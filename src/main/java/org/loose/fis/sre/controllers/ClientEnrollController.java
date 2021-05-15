@@ -15,7 +15,7 @@ public class ClientEnrollController {
     @FXML
     private TextField enroll;
     @FXML
-    private TextField prognamefield;
+    private TextField enrollfield;
 
     public void handleBackButton() throws IOException{
         Main x = new Main();
@@ -24,7 +24,7 @@ public class ClientEnrollController {
 
     public void handleEnrolledButton(){
         String name = User.getCurrentUser();
-        ProgramService.addClient(ProgramService.getProgramName(prognamefield.getText()),name);
+        ProgramService.addClient(ProgramService.getProgramName(enrollfield.getText()),name);
 
         enroll.setText("Successfully enrolled!");
         enroll.setStyle("-fx-text-fill: red");
