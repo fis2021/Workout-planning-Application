@@ -26,7 +26,7 @@ public class ProgramService {
         programNameRepository = database.getRepository(ProgramName.class);
     }
 
-    public static void addName(String  name, String intensity,int duration) throws ProgramAlreadyExistsException {
+    public static void addName(String  name, String intensity,String duration) throws ProgramAlreadyExistsException {
         checkNameDoesNotAlreadyExist(name);
         programNameRepository.insert(new ProgramName(name,intensity, duration));
     }

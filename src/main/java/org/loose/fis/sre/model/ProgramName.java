@@ -5,25 +5,14 @@ package org.loose.fis.sre.model;
 public class ProgramName {
     private String name;
     private String intensity;
-    private int duration;
-    private String[] client = new String[10];
-    public int counter;
+    private String duration;
 
-    public ProgramName(String name, String intensity, int duration) {
+    public ProgramName(String name, String intensity,String duration ) {
         this.name = name;
-        this.intensity = intensity;
-        this.duration = duration;
+        this.intensity=intensity;
+        this.duration=duration;
     }
 
-    public String
-
-    public int getCounter() {
-        return counter;
-    }
-
-    public void setCounter(int counter) {
-        this.counter = counter;
-    }
 
     public String getName() {
         return name;
@@ -41,11 +30,11 @@ public class ProgramName {
         this.intensity = intensity;
     }
 
-    public int getDuration() {
+    public String getDuration() {
         return duration;
     }
 
-    public void setDuration(int duration) {
+    public void setDuration(String duration) {
         this.duration=duration;
     }
 
@@ -55,12 +44,12 @@ public class ProgramName {
         if (o == null || getClass() != o.getClass()) return false;
         ProgramName programName = (ProgramName) o;
         if(!Objects.equals(name, programName.name)) return false;
-        return duration==0 ? duration== programName.duration : programName.duration==0;
+        return Objects.equals(name, programName.name) && Objects.equals(intensity, programName.intensity)  && Objects.equals(duration, programName.duration);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, duration);
+        return Objects.hash(name, intensity, duration);
     }
 
     public String toString(){
