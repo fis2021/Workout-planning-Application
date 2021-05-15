@@ -6,6 +6,9 @@ public class ProgramName {
     private String name;
     private String intensity;
     private String duration;
+    public String[] client = new String[20];
+    private int counter;
+    public int[] durationleft=new int[20];
 
     public ProgramName(String name, String intensity,String duration ) {
         this.name = name;
@@ -13,6 +16,13 @@ public class ProgramName {
         this.duration=duration;
     }
 
+    public int getCounter() {
+        return counter;
+    }
+
+    public void setCounter(int counter) {
+        this.counter = counter;
+    }
 
     public String getName() {
         return name;
