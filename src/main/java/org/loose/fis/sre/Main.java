@@ -5,7 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.loose.fis.sre.model.ProgramName;
 import org.loose.fis.sre.services.FileSystemService;
+import org.loose.fis.sre.services.ProgramService;
 import org.loose.fis.sre.services.UserService;
 
 import java.io.IOException;
@@ -19,6 +21,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws IOException {
         initDirectory();
         UserService.initDatabase();
+        ProgramService.initDatabase();
         stage = primaryStage;
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("login.fxml"));
         primaryStage.setScene(new Scene(root, 800, 600));

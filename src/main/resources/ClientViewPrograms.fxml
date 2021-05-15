@@ -17,11 +17,11 @@
                 <Font name="Impact" size="38.0" />
             </font>
         </Text>
-        <TableView layoutX="50.0" layoutY="135.0" prefHeight="200.0" prefWidth="500.0">
+        <TableView fx:id="table" layoutX="50.0" layoutY="135.0" prefHeight="200.0" prefWidth="500.0">
             <columns>
-                <TableColumn prefWidth="161.4000244140625" text="Program name" />
-                <TableColumn prefWidth="166.0" text="Coach" />
-            <TableColumn prefWidth="166.0" text="Duration" />
+                <TableColumn prefWidth="166.66" text="Program name" />
+                <TableColumn prefWidth="166.66" text="Intensity" />
+            <TableColumn prefWidth="166.66" text="Duration" />
             </columns>
         </TableView>
         <Button layoutX="450.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE">

@@ -21,12 +21,12 @@
             <font>
                 <Font name="Times New Roman" size="16.0" />
             </font></Button>
-      <Label alignment="CENTER" layoutX="73.0" layoutY="244.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #8a4242;" text="Choosen program" textAlignment="CENTER" textFill="WHITE">
+      <Label alignment="CENTER" layoutX="25.0" layoutY="244.0" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #8a4242;" text="Program name" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="395.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleEnrolledButton" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: #8a4242;" text="Enroll" textFill="WHITE">
+      <Button layoutX="479.0" layoutY="244.0" mnemonicParsing="false" onAction="#handleEnrolledButton" prefHeight="50.0" prefWidth="70.0" style="-fx-background-color: #8a4242;" text="Enroll" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
@@ -34,6 +34,11 @@
       <TextField fx:id="enroll" alignment="CENTER" blendMode="DARKEN" layoutX="188.0" layoutY="318.0" prefHeight="40.0" prefWidth="223.0">
          <font>
             <Font name="System Bold" size="18.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="enrollfield" alignment="CENTER" layoutX="211.0" layoutY="244.0" prefHeight="50.0" prefWidth="200.0" promptText="Insert program name" style="-fx-background-color: #8a4242;">
+         <font>
+            <Font size="14.0" />
          </font>
       </TextField>
     </children>

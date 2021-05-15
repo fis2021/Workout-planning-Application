@@ -57,6 +57,14 @@ public class ProgramService {
                 return productName;
         return null;
 
+    }
+
+    public static void addClient(ProgramName programName, String clientname){
+        if (programName.getCounter()<10)
+        {
+            programName.getClient[programName.getCounter()]=clientname;
+            programName.setCounter(programName.getCounter()+1);
+        }
 
     }
 
