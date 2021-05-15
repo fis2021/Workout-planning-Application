@@ -18,6 +18,7 @@ package org.loose.fis.sre.services;
 public class ProgramService {
 
     private static ObjectRepository<ProgramName> programNameRepository;
+    private static Nitrite database;
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
                 .filePath(getPathToFile("program-name.db").toFile())
@@ -25,6 +26,7 @@ public class ProgramService {
 
         programNameRepository = database.getRepository(ProgramName.class);
     }
+
 
     public static void addName(String  name, String intensity,String duration) throws ProgramAlreadyExistsException {
         checkNameDoesNotAlreadyExist(name);
