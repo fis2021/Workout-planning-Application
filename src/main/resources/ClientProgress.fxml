@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0"  prefWidth="600.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ClientProgressController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ClientProgressController">
     <children>
         <ImageView fitHeight="400.0" fitWidth="600.0" layoutX="-1.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
             <image>
@@ -17,11 +17,11 @@
                 <Font name="Impact" size="38.0" />
             </font>
         </Text>
-        <TableView layoutX="50.0" layoutY="135.0" prefHeight="200.0" prefWidth="500.0">
+        <TableView fx:id="table" layoutX="50.0" layoutY="135.0" prefHeight="200.0" prefWidth="500.0">
             <columns>
-                <TableColumn prefWidth="166.0" text="Program" />
-                <TableColumn prefWidth="166.0" text="Coach" />
-            <TableColumn prefWidth="166.0" text="Progress" />
+                <TableColumn fx:id="columnname" prefWidth="166.0" text="Program" />
+                <TableColumn fx:id="columnintensity" prefWidth="166.0" text="Intensity" />
+            <TableColumn fx:id="columnprogress" prefWidth="166.0" text="Progress" />
             </columns>
         </TableView>
       <Button layoutX="450.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE">

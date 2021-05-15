@@ -1,5 +1,6 @@
 package org.loose.fis.sre.services;
 
+        import javafx.beans.property.StringProperty;
         import org.dizitart.no2.Nitrite;
         import org.dizitart.no2.objects.ObjectRepository;
         import org.loose.fis.sre.exceptions.ProgramAlreadyExistsException;
@@ -88,4 +89,27 @@ public class ProgramService {
         return -1;
     }
 
+    public static ArrayList<String> programNamelist() {
+        ArrayList<String> list = new ArrayList<>();
+        for(ProgramName programName : programNameRepository.find()) {
+            list.add(programName.getName());
+        }
+        return list;
+    }
+
+    public static ArrayList<String> programIntensitylist() {
+        ArrayList<String> list = new ArrayList<>();
+        for(ProgramName programName : programNameRepository.find()) {
+            list.add(programName.getIntensity());
+        }
+        return list;
+    }
+
+    public static ArrayList<String> programDurationlist() {
+        ArrayList<String> list = new ArrayList<>();
+        for(ProgramName programName : programNameRepository.find()) {
+            list.add(programName.getDuration());
+        }
+        return list;
+    }
 }
