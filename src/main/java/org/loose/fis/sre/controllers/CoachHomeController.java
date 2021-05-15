@@ -13,17 +13,17 @@ public class CoachHomeController {
     }
 
     public void handleClients() throws IOException {
-        Main y = new Main();
-        y.changeWindow("CoachCanSeeListOfClients.fxml");
+        Main x = new Main();
+        x.changeWindow("CoachCanSeeListOfClients.fxml");
     }
 
     public void handlePrograms() throws IOException {
-        Main z = new Main();
-        z.changeWindow("viewPrograms.fxml");
+        Main x = new Main();
+        x.changeWindow("viewPrograms.fxml");
     }
 
     public void handleProgress() throws IOException {
-        Main q = new Main();
-        q.changeWindow("Coach_Seeprogress.fxml");
+        Main x = new Main();
+        x.changeWindow("Coach_Seeprogress.fxml");
     }
 }

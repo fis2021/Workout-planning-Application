@@ -19,7 +19,7 @@ package org.loose.fis.sre.controllers;
   import java.util.List;
 
 public class ViewProgramsController {
-
+/*
     @FXML
     private TableView<ProgramName> programTable;
     @FXML
@@ -27,22 +27,22 @@ public class ViewProgramsController {
     @FXML
     private TableColumn<ProgramName, String> programDurationColumn;
     @FXML
-    private TableColumn<ProgramName, String> programIntensityColumn;
+    private TableColumn<ProgramName, String> intensityColumn;
     @FXML
     private Button addButton;
 
 
     public void initialize() {
         programNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
-        programIntensityColumn.setCellValueFactory(new PropertyValueFactory<>("intensity"));
+        intensityColumn.setCellValueFactory(new PropertyValueFactory<>("intensity"));
         programDurationColumn.setCellValueFactory(new PropertyValueFactory<>("duration"));
 
         programTable.setItems(categories);
-    }
+    }*/
 
     public void handleAddPrograms() throws IOException {
         Main x = new Main();
-        x.changeWindow("Coach_AddPrograms.fxml");
+        x.changeWindow("Coach_addPrograms.fxml");
     }
 
     public void handleBackPrograms() throws IOException {
@@ -50,8 +50,8 @@ public class ViewProgramsController {
         x.changeWindow("CoachHome.fxml");
     }
 
-    private ObservableList<ProgramName> categories = FXCollections.observableArrayList(ProgramService.programNames());
+    /*private ObservableList<ProgramName> categories = FXCollections.observableArrayList(ProgramService.programNames());
     public List <ProgramName> getProgramNamesFromTable() {
         return programTable.getItems();
-    }
+    }*/
 }

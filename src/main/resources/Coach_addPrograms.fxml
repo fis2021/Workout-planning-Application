@@ -16,20 +16,20 @@
         <Font name="Impact" size="38.0" />
     </font></Label>
 
-<TextField fx:id="name" opacity="0.5" prefHeight="57.0" prefWidth="418.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+<TextField fx:id="nameField" opacity="0.5" prefHeight="57.0" prefWidth="418.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
     <font>
         <Font name="Impact" size="38.0" />
     </font></TextField>
 
    
-        <TextField fx:id="intensity" opacity="0.5" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+        <TextField fx:id="intensityField" opacity="0.5" prefWidth="150.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
             <font>
                 <Font name="Impact" size="38.0" />
             </font></TextField>
 
 
 
-<TextField fx:id="duration" opacity="0.5" GridPane.columnIndex="2" GridPane.rowIndex="2">
+<TextField fx:id="durationField" opacity="0.5" GridPane.columnIndex="2" GridPane.rowIndex="2">
     <font>
         <Font name="Impact" size="38.0" />
     </font></TextField>
@@ -56,13 +56,20 @@
 </HBox>
 
 <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="4">
-    <Button prefHeight="45.0" prefWidth="116.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE">
+    <Button  onAction="#handleAddButtonAction" prefHeight="45.0" prefWidth="116.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE">
         <font>
             <Font name="Times New Roman" size="20.0" />
         </font></Button>
+
 </HBox>
+
+
    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
-<columnConstraints>
+
+
+    <Text id="AddProgramMessage" fx:id="AddProgramMessage" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+    <columnConstraints>
     <ColumnConstraints />
     <ColumnConstraints />
       <ColumnConstraints />

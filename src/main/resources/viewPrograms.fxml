@@ -25,7 +25,7 @@
                 </Text>
             </top>
             <center>
-                <TableView fx:id="typeTable" prefHeight="370.0" prefWidth="642.0" BorderPane.alignment="CENTER">
+                <TableView fx:id="programTable" prefHeight="370.0" prefWidth="642.0" BorderPane.alignment="CENTER">
                     <columns>
                         <TableColumn fx:id="programNameColumn" prefWidth="273.60000002384186" text="Name" />
                         <TableColumn fx:id="intensityColumn" prefWidth="224.0" text="Intensity" />
@@ -41,7 +41,7 @@
 
             
             <bottom>
-            <Button fx:id="handleDeleteNameButtonAction" mnemonicParsing="false"  prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Delete" textFill="WHITE" BorderPane.alignment="CENTER">
+            <Button  mnemonicParsing="false"  prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Delete" textFill="WHITE" BorderPane.alignment="CENTER">
                 <font>
                     <Font name="Times New Roman" size="20.0" />
                 </font>
@@ -86,7 +86,4 @@
 
     </children>
 </AnchorPane>
-    <HBox alignment="TOP_CENTER" prefHeight="120.0" prefWidth="800.0" style="-fx-spacing: 50;">
-
-    </HBox>
 </VBox>
