@@ -7,7 +7,6 @@ import org.loose.fis.sre.model.ProgramName;
 import org.loose.fis.sre.model.User;
 import org.loose.fis.sre.services.ProgramService;
 
-import static org.loose.fis.sre.services.ProgramService.addClient;
 import java.io.IOException;
 
 public class ClientEnrollController {
