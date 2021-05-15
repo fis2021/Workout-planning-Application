@@ -17,7 +17,6 @@ package org.loose.fis.sre.services;
 public class ProgramService {
 
     private static ObjectRepository<ProgramName> programNameRepository;
-
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
                 .filePath(getPathToFile("program-name.db").toFile())
@@ -60,13 +59,33 @@ public class ProgramService {
     }
 
     public static void addClient(ProgramName programName, String clientname){
-        if (programName.getCounter()<10)
+        if (programName.getCounter()<20)
         {
-            programName.getClient[programName.getCounter()]=clientname;
+            programName.client[programName.getCounter()]=clientname;
             programName.setCounter(programName.getCounter()+1);
         }
 
     }
 
+    public static String workout(ProgramName programName, int counter){
+        if (programName.durationleft[counter]==0)
+        {
+            return "Program "+programName.getName()+" finished!";
+        }
+        else
+        {
+            programName.durationleft[counter]--;
+            return programName.durationleft[counter]+" days left of the program";
+        }
+    }
+
+    public static int findClient(ProgramName programName, String name){
+        for(int i=0;i<programName.client.length;i++)
+        {
+           if  (Objects.equals(programName.client[i],name))
+               return i;
+        }
+        return -1;
+    }
 
 }
