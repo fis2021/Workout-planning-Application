@@ -6,6 +6,8 @@ package org.loose.fis.sre.controllers;
 public class SeeListOfClientsController {
 
 
+
+
     public void handleBackClientsButton() throws IOException {
         Main x = new Main();
         x.changeWindow("CoachHome.fxml");
