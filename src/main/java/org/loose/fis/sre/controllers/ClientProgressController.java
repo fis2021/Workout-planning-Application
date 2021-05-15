@@ -16,20 +16,7 @@ import java.util.Objects;
 
 public class ClientProgressController {
 
-    @FXML
-    private TableView table;
-    @FXML
-    private TableColumn columnname;
-    @FXML
-    private TableColumn columnintensity;
-    @FXML
-    private TableColumn columnprogress;
 
-    public void initialize(){
-        columnname.(ProgramService.programNamelist());
-        columnintensity.cellValueFactoryProperty(ProgramService.programIntensitylist());
-        columnprogress.cellValueFactoryProperty(ProgramService.programDurationlist());
-    }
 
     public void handleBackButton() throws IOException{
         Main x = new Main();
