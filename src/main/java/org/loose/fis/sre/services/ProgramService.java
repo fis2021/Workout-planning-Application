@@ -28,9 +28,9 @@ public class ProgramService {
     }
 
 
-    public static void addName(String  name, String intensity,String duration) throws ProgramAlreadyExistsException {
+    public static void addName(String  name, String intensity,String duration,String coach,String link) throws ProgramAlreadyExistsException {
         checkNameDoesNotAlreadyExist(name);
-        programNameRepository.insert(new ProgramName(name,intensity, duration));
+        programNameRepository.insert(new ProgramName(name,intensity, duration,coach,link));
     }
 
     public static void removeName(ProgramName programName) {
@@ -100,21 +100,12 @@ public class ProgramService {
         return -1;
     }
 
-
-
-    public static ArrayList<String> programIntensitylist() {
+    /*public static ArrayList<String> clientPrograms(String name) {
         ArrayList<String> list = new ArrayList<>();
-        for(ProgramName programName : programNameRepository.find()) {
-            list.add(programName.getIntensity());
+        for(ProgramName program : programNameRepository.find()) {
+            if (ProgramService.findClient(program,name))
         }
         return list;
-    }
+    }*/
 
-    public static ArrayList<String> programDurationlist() {
-        ArrayList<String> list = new ArrayList<>();
-        for(ProgramName programName : programNameRepository.find()) {
-            list.add(programName.getDuration());
-        }
-        return list;
-    }
 }

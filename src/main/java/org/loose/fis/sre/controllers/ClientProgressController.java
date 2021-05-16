@@ -24,20 +24,20 @@ public class ClientProgressController {
     @FXML
     private TableColumn <ProgramName,String>  columnintensity;
     @FXML
-    private TableColumn <ProgramName,String> columnprogress;
+    private TableColumn <ProgramName,String>  columnprogress;
 
     public void initialize(){
         columnname.setCellValueFactory(new PropertyValueFactory<>("name"));
         columnintensity.setCellValueFactory(new PropertyValueFactory<>("intensity"));
         columnprogress.setCellValueFactory(new PropertyValueFactory<>("duration"));
-
-        table.setItems(every);
+        table.setItems(show);
     }
 
-    private ObservableList<ProgramName> every = FXCollections.observableArrayList(ProgramService.programNames());
-    public List<ProgramName> getProgramNamesFromTable() {
+    private ObservableList<ProgramName> show = FXCollections.observableArrayList(ProgramService.programNames());
+
+    /*public List<String> getProgramNamesFromTable() {
         return table.getItems();
-    }
+    }*/
 
     public void handleBackButton() throws IOException{
         Main x = new Main();

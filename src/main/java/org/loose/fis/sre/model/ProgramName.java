@@ -9,20 +9,24 @@ public class ProgramName {
     private String name;
     private String intensity;
     private String duration;
+    private String coach;
+    private String link;
     public String[] client = new String[20];
     private int counter;
     public int[] durationleft=new int[20];
 
     public ProgramName(){}
-    public ProgramName(String name, String intensity,String duration ) {
+    public ProgramName(String name, String intensity,String duration,String coach,String link) {
         this.name = name;
         this.intensity=intensity;
         this.duration=duration;
+        this.coach=coach;
+        this.link=link;
         this.counter=0;
         for(int i=0;i<client.length;i++)
         {
             this.client[i]="0";
-            this.durationleft[i]=0;
+            this.durationleft[i]=Integer.parseInt(duration);
         }
 
     }
