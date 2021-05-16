@@ -2,7 +2,6 @@ package org.loose.fis.sre.model;
 
 import org.dizitart.no2.objects.Id;
 
-
 public class User
 {
     @Id
