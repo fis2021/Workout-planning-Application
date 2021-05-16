@@ -25,22 +25,18 @@ public class ClientProgressController {
     private TableColumn <ProgramName,String> columnname;
     @FXML
     private TableColumn <ProgramName,String>  columnintensity;
-    //@FXML
-    //private TableColumn <ProgramName,String>  columnprogress;
+    @FXML
+    private TableColumn <ProgramName,String>  columnprogress;
 
 
     public void initialize(){
         columnname.setCellValueFactory(new PropertyValueFactory<>("name"));
         columnintensity.setCellValueFactory(new PropertyValueFactory<>("intensity"));
-       // columnprogress.setCellValueFactory(new PropertyValueFactory<>("durationleft"));
+        columnprogress.setCellValueFactory(new PropertyValueFactory<>("duration"));
         table.setItems(show);
     }
 
     private ObservableList<ProgramName> show = FXCollections.observableArrayList(ProgramService.clientPrograms(User.getCurrentUser()));
-
-    /*public List<String> getProgramNamesFromTable() {
-        return table.getItems();
-    }*/
 
     public void handleBackButton() throws IOException{
         Main x = new Main();
