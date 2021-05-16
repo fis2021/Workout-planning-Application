@@ -18,8 +18,10 @@ package org.loose.fis.sre.controllers;
   import org.loose.fis.sre.services.ProgramService;
   import java.util.List;
 
+  import static org.dizitart.no2.objects.filters.ObjectFilters.eq;
+
 public class ViewProgramsController {
-/*
+
     @FXML
     private TableView<ProgramName> programTable;
     @FXML
@@ -38,7 +40,19 @@ public class ViewProgramsController {
         programDurationColumn.setCellValueFactory(new PropertyValueFactory<>("duration"));
 
         programTable.setItems(categories);
-    }*/
+    }
+
+    @FXML
+    public void removeProgram() {
+
+        ObservableList<ProgramName> p,p1;
+        p1=programTable.getSelectionModel().getSelectedItems();
+
+        ProgramService.clearProgram(p1.get(0).getName(),p1.get(0).getIntensity(),p1.get(0).getDuration());
+
+        p= programTable.getItems();
+        p1.forEach(p::remove);
+    }
 
     public void handleAddPrograms() throws IOException {
         Main x = new Main();
@@ -50,8 +64,8 @@ public class ViewProgramsController {
         x.changeWindow("CoachHome.fxml");
     }
 
-    /*private ObservableList<ProgramName> categories = FXCollections.observableArrayList(ProgramService.programNames());
+   private ObservableList<ProgramName> categories = FXCollections.observableArrayList(ProgramService.programNames());
     public List <ProgramName> getProgramNamesFromTable() {
         return programTable.getItems();
-    }*/
+    }
 }

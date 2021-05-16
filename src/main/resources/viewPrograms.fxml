@@ -5,15 +5,12 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-
-
 <VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.loose.fis.sre.controllers.ViewProgramsController">
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/11.0.1">
 
     <children>
-        <BorderPane layoutX="36.0" prefHeight="600.0" prefWidth="740.0">
+        <BorderPane layoutX="238.0" layoutY="147.0" prefHeight="370.0" prefWidth="734.0">
             <padding>
                 <Insets bottom="50.0" left="50.0" right="20.0" top="30.0" />
             </padding>
@@ -25,7 +22,7 @@
                 </Text>
             </top>
             <center>
-                <TableView fx:id="programTable" prefHeight="370.0" prefWidth="642.0" BorderPane.alignment="CENTER">
+                <TableView fx:id="programTable" prefHeight="208.0" prefWidth="578.0" BorderPane.alignment="CENTER">
                     <columns>
                         <TableColumn fx:id="programNameColumn" prefWidth="273.60000002384186" text="Name" />
                         <TableColumn fx:id="intensityColumn" prefWidth="224.0" text="Intensity" />
@@ -34,14 +31,14 @@
                 </TableView>
             </center>
         </BorderPane>
-        <BorderPane layoutX="281.0" layoutY="6.0" prefHeight="581.0" prefWidth="531.0">
+        <BorderPane layoutX="743.0" layoutY="4.0" prefHeight="74.0" prefWidth="178.0">
             <padding>
                 <Insets bottom="50.0" left="20.0" right="50.0" top="30.0" />
             </padding>
 
-            
+
             <bottom>
-            <Button  mnemonicParsing="false"  prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Delete" textFill="WHITE" BorderPane.alignment="CENTER">
+            <Button fx:id="removeProgram" mnemonicParsing="false" onAction="#removeProgram" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Delete" textFill="WHITE" BorderPane.alignment="CENTER">
                 <font>
                     <Font name="Times New Roman" size="20.0" />
                 </font>
@@ -50,39 +47,35 @@
             </bottom>
 
         </BorderPane>
-        <BorderPane layoutX="-120.0" layoutY="6.0" prefHeight="582.0" prefWidth="917.0">
+        <BorderPane layoutX="-120.0" layoutY="463.0" prefHeight="126.0" prefWidth="442.0">
             <padding>
                 <Insets bottom="50.0" left="20.0" right="50.0" top="30.0" />
             </padding>
 
-
-                <bottom>
-                    <Button mnemonicParsing="false" onAction="#handleAddPrograms" prefHeight="45.0" prefWidth="147.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE" BorderPane.alignment="CENTER">
-                        <font>
-                            <Font name="Times New Roman" size="20.0" />
-                        </font>
-                    </Button>
-                </bottom>
-
-
-
-        </BorderPane>
-        <BorderPane layoutX="81.0" layoutY="-15" prefHeight="81.0" prefWidth="1201.0">
+      
+      
+              </BorderPane>
+        <BorderPane layoutX="4.0" layoutY="475.0" prefHeight="83.0" prefWidth="1202.0">
             <padding>
                 <Insets bottom="5.0" left="20.0" right="50.0" top="30.0" />
             </padding>
 
-
-            <bottom>
-                <Button  mnemonicParsing="false" onAction="#handleBackPrograms" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE" BorderPane.alignment="CENTER">
+      
+                  <bottom>
+                <Button mnemonicParsing="false" onAction="#handleBackPrograms" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE" BorderPane.alignment="CENTER">
                     <font>
                         <Font name="Times New Roman" size="20.0" />
                     </font>
                 </Button>
 
-            </bottom>
+                  </bottom>
 
-        </BorderPane>
+              </BorderPane>
+              <Button layoutX="350.0" layoutY="507.0" mnemonicParsing="false" onAction="#handleAddPrograms" prefHeight="45.0" prefWidth="147.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE">
+                  <font>
+                      <Font name="Times New Roman" size="20.0" />
+                  </font>
+              </Button>
 
     </children>
 </AnchorPane>
