@@ -25,13 +25,14 @@ public class ClientProgressController {
     private TableColumn <ProgramName,String> columnname;
     @FXML
     private TableColumn <ProgramName,String>  columnintensity;
+    @FXML
+    private TableColumn <ProgramName,String>  columnprogress;
 
 
     public void initialize(){
         columnname.setCellValueFactory(new PropertyValueFactory<>("name"));
         columnintensity.setCellValueFactory(new PropertyValueFactory<>("intensity"));
-
-
+        columnprogress.setCellValueFactory(new PropertyValueFactory<>("get"));
         table.setItems(show);
     }
 

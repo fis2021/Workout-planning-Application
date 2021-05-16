@@ -22,9 +22,7 @@ public class ClientEnrollController {
     }
 
     public void handleEnrolledButton(){
-        String name = User.getCurrentUser();
-        ProgramService.addClient(ProgramService.getProgramName(enrollfield.getText()),name);
-
+        ProgramService.addClient(ProgramService.getProgramName(enrollfield.getText()),User.getCurrentUser());
         enroll.setText("Successfully enrolled!");
         enroll.setStyle("-fx-text-fill: red");
     }

@@ -2,6 +2,7 @@ package org.loose.fis.sre.model;
 
         import org.dizitart.no2.objects.Id;
 
+        import java.util.Arrays;
         import java.util.Objects;
 
 public class ProgramName {
@@ -11,9 +12,9 @@ public class ProgramName {
     private String duration;
     private String coach;
     private String link;
-    public String[] client = new String[20];
+    private String[] client = new String[30];
     private int counter;
-    public int[] durationleft=new int[20];
+    private String[] durationleft=new String[30];
 
     public ProgramName(){}
     public ProgramName(String name, String intensity,String duration,String coach,String link) {
@@ -26,11 +27,24 @@ public class ProgramName {
         for(int i=0;i<client.length;i++)
         {
             this.client[i]="0";
-            this.durationleft[i]=Integer.parseInt(duration);
+            this.durationleft[i]=duration;
         }
 
     }
 
+    public void addClient(String name){
+        this.client[this.counter]=name;
+        this.counter++;
+    }
+    public void addDurationleft(String durationleft){
+        this.durationleft[this.counter]=durationleft;
+    }
+    public String loadDurationleft(int numar){
+        return this.durationleft[numar];
+    }
+    public String loadClient(int numar){
+        return this.client[numar];
+    }
     public String getCoach() {
         return coach;
     }
@@ -85,7 +99,17 @@ public class ProgramName {
         return Objects.hash(name, intensity, duration);
     }
 
-    public String toString(){
-        return name;
+    @Override
+    public String toString() {
+        return "ProgramName{" +
+                "name='" + name + '\'' +
+                ", intensity='" + intensity + '\'' +
+                ", duration='" + duration + '\'' +
+                ", coach='" + coach + '\'' +
+                ", link='" + link + '\'' +
+                ", client=" + Arrays.toString(client) +
+                ", counter=" + counter +
+                ", durationleft=" + Arrays.toString(durationleft) +
+                '}';
     }
 }

@@ -1,19 +1,14 @@
 package org.loose.fis.sre.services;
 
-        import javafx.beans.property.StringProperty;
         import org.dizitart.no2.Nitrite;
         import org.dizitart.no2.objects.ObjectRepository;
         import org.loose.fis.sre.exceptions.ProgramAlreadyExistsException;
-        import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
         import org.loose.fis.sre.model.ProgramName;
-        import org.loose.fis.sre.model.User;
 
         import java.util.ArrayList;
-        import java.util.List;
         import java.util.Objects;
 
         import static org.dizitart.no2.objects.filters.ObjectFilters.eq;
-        import static org.loose.fis.sre.services.FileSystemService.getPathToFile;
 
 public class ProgramService {
 
@@ -73,30 +68,28 @@ public class ProgramService {
     }
 
     public static void addClient(ProgramName programName, String clientname){
-        if (programName.getCounter()<20)
-        {
-            programName.client[programName.getCounter()]=clientname;
-            programName.setCounter(programName.getCounter()+1);
-        }
 
+        programName.addClient(clientname);
+        programNameRepository.update(programName);
     }
 
     public static String workout(ProgramName programName, int counter){
-        if (programName.durationleft[counter]==0)
+        int x = Integer.parseInt(programName.loadDurationleft(counter));
+        if (x==0)
         {
             return "Program "+programName.getName()+" finished!";
         }
         else
         {
-            programName.durationleft[counter]--;
-            return programName.durationleft[counter]+" days left of the program";
+            programName.addDurationleft(String.valueOf(x-1));
+            return programName.loadDurationleft(counter)+" days left of the program";
         }
     }
 
     public static int findClient(ProgramName programName, String name){
-        for(int i=0;i<programName.client.length;i++)
+        for(int i=0;i<programName.getCounter();i++)
         {
-           if  (Objects.equals(programName.client[i],name))
+           if  (name.equals(programName.loadClient(i)))
                return i;
         }
         return -1;
@@ -105,7 +98,7 @@ public class ProgramService {
     public static ArrayList<ProgramName> clientPrograms(String name) {
         ArrayList<ProgramName> list = new ArrayList<>();
         for(ProgramName program : programNameRepository.find()) {
-            if (ProgramService.findClient(program,name)>-1){
+            if (ProgramService.findClient(program,name) > -1){
                 list.add(program);
             }
 
