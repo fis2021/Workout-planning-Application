@@ -95,6 +95,20 @@ public class ProgramService {
         return -1;
     }
 
+    public static ArrayList<String> coachclientlist(String coach){
+        ArrayList<String> list = new ArrayList<>();
+        for(ProgramName program : programNameRepository.find()) {
+
+            if (coach.equals(program.getCoach())){
+                for(int i=0;i<program.getCounter();i++)
+                {
+                    list.add(program.loadClient(i));
+                }
+            }
+        }
+        return list;
+    }
+
     public static ArrayList<ProgramName> clientPrograms(String name) {
         ArrayList<ProgramName> list = new ArrayList<>();
         for(ProgramName program : programNameRepository.find()) {
