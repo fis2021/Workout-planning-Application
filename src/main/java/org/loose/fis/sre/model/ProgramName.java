@@ -1,8 +1,11 @@
 package org.loose.fis.sre.model;
 
+        import org.dizitart.no2.objects.Id;
+
         import java.util.Objects;
 
 public class ProgramName {
+    @Id
     private String name;
     private String intensity;
     private String duration;
@@ -10,10 +13,18 @@ public class ProgramName {
     private int counter;
     public int[] durationleft=new int[20];
 
+    public ProgramName(){}
     public ProgramName(String name, String intensity,String duration ) {
         this.name = name;
         this.intensity=intensity;
         this.duration=duration;
+        this.counter=0;
+        for(int i=0;i<client.length;i++)
+        {
+            this.client[i]="0";
+            this.durationleft[i]=0;
+        }
+
     }
 
     public int getCounter() {
@@ -36,7 +47,7 @@ public class ProgramName {
         return intensity;
     }
 
-    public void setIntensity(String name) {
+    public void setIntensity(String intensity) {
         this.intensity = intensity;
     }
 

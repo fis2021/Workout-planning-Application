@@ -21,7 +21,7 @@ public class ProgramService {
     private static Nitrite database;
     public static void initDatabase() {
         Nitrite database = Nitrite.builder()
-                .filePath(getPathToFile("program-name.db").toFile())
+                .filePath(FileSystemService.getPathToFile("program-name.db").toFile())
                 .openOrCreate("test", "test");
 
         programNameRepository = database.getRepository(ProgramName.class);
@@ -44,18 +44,28 @@ public class ProgramService {
         }
     }
 
+    public static void clearProgram(String name, String intensity,String duration){
+        for(ProgramName p:programNameRepository.find()) {
+            if(p.getName()!=null && p.getName().equals(name) && p.getIntensity().equals(intensity) && p.getDuration().equals(duration)) {
+                programNameRepository.remove(p);
+                break;
+            }
+        }
+    }
+
+
     public static ArrayList<ProgramName> programNames() {
         ArrayList<ProgramName> list = new ArrayList<>();
-        for(ProgramName programName : programNameRepository.find()) {
-            list.add(programName);
+        for(ProgramName program : programNameRepository.find()) {
+            list.add(program);
         }
         return list;
     }
 
     public static ProgramName getProgramName(String name){
-        for(ProgramName productName : programNameRepository.find())
-            if(Objects.equals(name, productName.getName()))
-                return productName;
+        for(ProgramName programName : programNameRepository.find())
+            if(Objects.equals(name, programName.getName()))
+                return programName;
         return null;
 
     }
@@ -90,13 +100,7 @@ public class ProgramService {
         return -1;
     }
 
-    public static ArrayList<String> programNamelist() {
-        ArrayList<String> list = new ArrayList<>();
-        for(ProgramName programName : programNameRepository.find()) {
-            list.add(programName.getName());
-        }
-        return list;
-    }
+
 
     public static ArrayList<String> programIntensitylist() {
         ArrayList<String> list = new ArrayList<>();
