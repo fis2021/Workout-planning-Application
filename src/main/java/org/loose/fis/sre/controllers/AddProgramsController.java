@@ -28,6 +28,10 @@ public class AddProgramsController {
     private TextField durationField;
     @FXML
     private Text AddProgramMessage;
+    @FXML
+    private TextField coachField;
+    @FXML
+    private TextField linkField;
 
 
     public void handleAddButtonAction()  {
@@ -35,7 +39,7 @@ public class AddProgramsController {
         try
         {
             ProgramService.checkNameDoesNotAlreadyExist(nameField.getText());
-            ProgramService.addName(nameField.getText(), intensityField.getText(), durationField.getText());
+            ProgramService.addName(nameField.getText(), intensityField.getText(), durationField.getText(),coachField.getText(),linkField.getText());
 
         }catch (Exception e)
         {

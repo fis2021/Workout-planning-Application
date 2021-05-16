@@ -10,9 +10,6 @@ import org.loose.fis.sre.Main;
 import org.loose.fis.sre.model.ProgramName;
 import org.loose.fis.sre.services.ProgramService;
 
-import static org.loose.fis.sre.services.ProgramService.programNames;
-import static org.loose.fis.sre.services.ProgramService.programIntensitylist;
-import static org.loose.fis.sre.services.ProgramService.programDurationlist;
 
 import java.io.IOException;
 import java.util.List;
@@ -27,19 +24,20 @@ public class ClientProgressController {
     @FXML
     private TableColumn <ProgramName,String>  columnintensity;
     @FXML
-    private TableColumn <ProgramName,String> columnprogress;
+    private TableColumn <ProgramName,String>  columnprogress;
 
     public void initialize(){
-        columnname.setCellValueFactory(new PropertyValueFactory<ProgramName,String>("name"));
-        columnintensity.setCellValueFactory(new PropertyValueFactory<ProgramName,String>("intensity"));
-        columnprogress.setCellValueFactory(new PropertyValueFactory<ProgramName,String>("duration"));
-        table.getColumns().add(columnname);
-        table.getColumns().add(columnintensity);
-        table.getColumns().add(columnprogress);
-        for (ProgramName helper : ProgramService.programNames()){
-            table.getItems().add(helper);
-        }
+        columnname.setCellValueFactory(new PropertyValueFactory<>("name"));
+        columnintensity.setCellValueFactory(new PropertyValueFactory<>("intensity"));
+        columnprogress.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        table.setItems(show);
     }
+
+    private ObservableList<ProgramName> show = FXCollections.observableArrayList(ProgramService.programNames());
+
+    /*public List<String> getProgramNamesFromTable() {
+        return table.getItems();
+    }*/
 
     public void handleBackButton() throws IOException{
         Main x = new Main();
