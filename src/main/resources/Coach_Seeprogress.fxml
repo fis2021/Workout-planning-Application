@@ -22,10 +22,9 @@
                 </Text>
             </top>
             <left>
-                <TableView fx:id="typeTable" prefHeight="370.0" prefWidth="642.0" BorderPane.alignment="CENTER">
+                <TableView fx:id="userTable" prefHeight="370.0" prefWidth="642.0" BorderPane.alignment="CENTER">
                     <columns>
-                        <TableColumn fx:id="programNameColumn" prefWidth="273.60000002384186" text="Name" />
-                        <TableColumn fx:id="progressColumn" prefWidth="224.0" text="Progress" />
+                        <TableColumn fx:id="usernameColumn" prefWidth="273.60000002384186" text="Name" />
                     </columns>
                 </TableView>
             </left>
