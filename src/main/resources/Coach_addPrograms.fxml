@@ -35,6 +35,9 @@
     </font></TextField>
 
 
+
+
+
 <Label text="Intensity" textFill="#400e0e" GridPane.columnIndex="1" GridPane.rowIndex="3">
     <font>
         <Font name="Impact" size="38.0" />
@@ -45,8 +48,25 @@
         <Font name="Impact" size="38.0" />
     </font></Label>
 
+    <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
 
-<HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <Label text="Link" textFill="#400e0e" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <font>
+                <Font name="Impact" size="38.0" />
+            </font></Label>
+
+    </HBox>
+
+    <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="4">
+
+        <TextField fx:id="linkField" opacity="0.5" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <font>
+                <Font name="Impact" size="38.0" />
+            </font></TextField>
+
+    </HBox>
+
+    <HBox alignment="bottom_left" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
 
     <Button onAction="#handleBackButton" prefHeight="43.0" prefWidth="120.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE">
         <font>
@@ -55,8 +75,8 @@
 
 </HBox>
 
-<HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="4">
-    <Button  onAction="#handleAddButtonAction" prefHeight="45.0" prefWidth="116.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE">
+<HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="6">
+    <Button onAction="#handleAddButtonAction" prefHeight="45.0" prefWidth="116.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE">
         <font>
             <Font name="Times New Roman" size="20.0" />
         </font></Button>
@@ -67,7 +87,7 @@
    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
 
 
-    <Text id="AddProgramMessage" fx:id="AddProgramMessage" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    <Text id="AddProgramMessage" fx:id="AddProgramMessage" GridPane.columnIndex="1" GridPane.rowIndex="5" />
 
     <columnConstraints>
     <ColumnConstraints />
@@ -80,8 +100,9 @@
     <RowConstraints maxHeight="144.40000000000003" minHeight="84.40000000000003" prefHeight="84.80000000000001" />
     <RowConstraints maxHeight="108.0" minHeight="58.0" prefHeight="81.0" />
     <RowConstraints maxHeight="65.39999999999998" minHeight="46.39999999999998" prefHeight="65.39999999999998" />
+    <RowConstraints maxHeight="16.0" minHeight="16.0" prefHeight="16.0" />
+    <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
     <RowConstraints />
-    <RowConstraints />
-    <RowConstraints />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
 </rowConstraints>
 </GridPane>

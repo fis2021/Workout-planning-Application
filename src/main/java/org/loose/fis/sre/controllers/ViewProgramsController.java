@@ -31,6 +31,10 @@ public class ViewProgramsController {
     @FXML
     private TableColumn<ProgramName, String> intensityColumn;
     @FXML
+    private TableColumn<ProgramName, String> coachColumn;
+    @FXML
+    private TableColumn<ProgramName, String> linkColumn;
+    @FXML
     private Button addButton;
 
 
@@ -38,6 +42,8 @@ public class ViewProgramsController {
         programNameColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
         intensityColumn.setCellValueFactory(new PropertyValueFactory<>("intensity"));
         programDurationColumn.setCellValueFactory(new PropertyValueFactory<>("duration"));
+        coachColumn.setCellValueFactory(new PropertyValueFactory<>("coach"));
+        linkColumn.setCellValueFactory(new PropertyValueFactory<>("link"));
 
         programTable.setItems(categories);
     }
@@ -48,7 +54,7 @@ public class ViewProgramsController {
         ObservableList<ProgramName> p,p1;
         p1=programTable.getSelectionModel().getSelectedItems();
 
-        ProgramService.clearProgram(p1.get(0).getName(),p1.get(0).getIntensity(),p1.get(0).getDuration());
+        ProgramService.clearProgram(p1.get(0).getName(),p1.get(0).getIntensity(),p1.get(0).getDuration(),p1.get(0).getCoach(),p1.get(0).getLink());
 
         p= programTable.getItems();
         p1.forEach(p::remove);
