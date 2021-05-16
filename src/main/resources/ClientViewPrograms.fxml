@@ -19,9 +19,11 @@
         </Text>
         <TableView fx:id="table" layoutX="50.0" layoutY="135.0" prefHeight="200.0" prefWidth="500.0">
             <columns>
-                <TableColumn fx:id="colname" prefWidth="166.66" text="Program name" />
-                <TableColumn fx:id="colintensity" prefWidth="166.66" text="Intensity" />
-            <TableColumn fx:id="colduration" prefWidth="166.66" text="Duration" />
+                <TableColumn fx:id="colname" prefWidth="100.0" text="Program name" />
+                <TableColumn fx:id="colintensity" prefWidth="100.0" text="Intensity" />
+            <TableColumn fx:id="colduration" prefWidth="100.0" text="Duration" />
+            <TableColumn fx:id="colcoach" prefWidth="100.0" text="Coach name" />
+            <TableColumn fx:id="collink" prefWidth="100.0" text="Program link" />
             </columns>
         </TableView>
         <Button layoutX="450.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE">

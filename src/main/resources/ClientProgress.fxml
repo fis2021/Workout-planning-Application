@@ -19,7 +19,7 @@
         </Text>
         <TableView fx:id="table" layoutX="50.0" layoutY="135.0" prefHeight="200.0" prefWidth="500.0">
             <columns>
-                <TableColumn fx:id="columnname" prefWidth="166.0" text="Program" />
+                <TableColumn fx:id="columnname" prefWidth="166.0" text="Program name" />
                 <TableColumn fx:id="columnintensity" prefWidth="166.0" text="Intensity" />
             <TableColumn fx:id="columnprogress" prefWidth="166.0" text="Progress" />
             </columns>
