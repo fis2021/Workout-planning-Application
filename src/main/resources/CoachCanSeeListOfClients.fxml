@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/11.0.1">
 
     <children>
-        <BorderPane layoutX="39.0" prefHeight="600.0" prefWidth="740.0">
+        <BorderPane layoutX="23.0" prefHeight="587.0" prefWidth="756.0">
             <padding>
                 <Insets bottom="50.0" left="50.0" right="20.0" top="30.0" />
             </padding>
@@ -22,31 +22,31 @@
                 </Text>
             </top>
             <center>
-                <TableView fx:id="typeTable" prefHeight="370.0" prefWidth="642.0" BorderPane.alignment="CENTER">
+                <TableView fx:id="clientTable" prefHeight="430.0" prefWidth="651.0" BorderPane.alignment="CENTER">
                     <columns>
-                        <TableColumn fx:id="programNameColumn" prefWidth="273.60000002384186" text="Name" />
+                        <TableColumn fx:id="usernameColumn" prefWidth="273.60000002384186" text="User" />
                     </columns>
                 </TableView>
             </center>
         </BorderPane>
-        <BorderPane layoutX="567.0" layoutY="228.0" prefHeight="357.0" prefWidth="243.0">
+        <BorderPane layoutX="552.0" layoutY="524.0" prefHeight="118.0" prefWidth="265.0">
             <padding>
                 <Insets bottom="50.0" left="20.0" right="50.0" top="30.0" />
             </padding>
             <bottom>
-                <Button  mnemonicParsing="false" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Remove client" textFill="WHITE" BorderPane.alignment="CENTER">
+                <Button mnemonicParsing="false" onAction="#removeClient" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Remove client" textFill="WHITE" BorderPane.alignment="CENTER">
                  <font>
                      <Font name="Times New Roman" size="20.0" />
                  </font>
              </Button>
             </bottom>
         </BorderPane>
-        <BorderPane layoutX="70.0" layoutY="228.0" prefHeight="357.0" prefWidth="243.0">
+        <BorderPane layoutX="70.0" layoutY="524.0" prefHeight="62.0" prefWidth="197.0">
             <padding>
                 <Insets bottom="50.0" left="20.0" right="50.0" top="30.0" />
             </padding>
             <bottom>
-                <Button onAction="#handleBackClientsButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE" BorderPane.alignment="CENTER">
+                <Button mnemonicParsing="false" onAction="#handleBackClientsButton" prefHeight="45.0" prefWidth="152.0" style="-fx-background-color: #8a4242;" text="Back" textFill="WHITE" BorderPane.alignment="CENTER">
                     <font>
                         <Font name="Times New Roman" size="20.0" />
                     </font>
