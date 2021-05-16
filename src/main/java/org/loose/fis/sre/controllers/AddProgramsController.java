@@ -41,7 +41,7 @@ public class AddProgramsController {
         {
             ProgramService.checkNameDoesNotAlreadyExist(nameField.getText());
             ProgramService.addName(nameField.getText(), intensityField.getText(), durationField.getText(), User.getCurrentUser(),linkField.getText());
-
+            AddProgramMessage.setText("Program added successfully!");
         }catch (Exception e)
         {
             AddProgramMessage.setText(e.getMessage());

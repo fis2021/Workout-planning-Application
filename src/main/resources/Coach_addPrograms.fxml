@@ -59,7 +59,7 @@
 
     <HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="4">
 
-        <TextField fx:id="linkField" opacity="0.5" GridPane.columnIndex="2" GridPane.rowIndex="2">
+        <TextField fx:id="linkField" opacity="0.5" prefHeight="74.0" prefWidth="557.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
             <font>
                 <Font name="Impact" size="38.0" />
             </font></TextField>
@@ -75,7 +75,13 @@
 
 </HBox>
 
-<HBox alignment="bottom_right" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="6">
+<HBox alignment="bottom_right" prefHeight="49.0" prefWidth="554.0" spacing="10" GridPane.columnIndex="2" GridPane.rowIndex="6">
+   
+   
+       <Text id="AddProgramMessage" fx:id="AddProgramMessage" fill="#400e0e" wrappingWidth="407.9999694824219">
+         <font>
+            <Font name="Times New Roman" size="18.0" />
+         </font></Text>
     <Button onAction="#handleAddButtonAction" prefHeight="45.0" prefWidth="116.0" style="-fx-background-color: #8a4242;" text="Add" textFill="WHITE">
         <font>
             <Font name="Times New Roman" size="20.0" />
@@ -86,21 +92,18 @@
 
    <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" />
 
-
-    <Text id="AddProgramMessage" fx:id="AddProgramMessage" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-
     <columnConstraints>
     <ColumnConstraints />
     <ColumnConstraints />
       <ColumnConstraints />
 </columnConstraints>
 <rowConstraints>
-    <RowConstraints maxHeight="145.4" minHeight="66.40000762939454" prefHeight="66.40000762939454" />
-    <RowConstraints maxHeight="158.39999237060545" minHeight="79.39999999999998" prefHeight="88.4" />
-    <RowConstraints maxHeight="144.40000000000003" minHeight="84.40000000000003" prefHeight="84.80000000000001" />
-    <RowConstraints maxHeight="108.0" minHeight="58.0" prefHeight="81.0" />
-    <RowConstraints maxHeight="65.39999999999998" minHeight="46.39999999999998" prefHeight="65.39999999999998" />
-    <RowConstraints maxHeight="16.0" minHeight="16.0" prefHeight="16.0" />
+    <RowConstraints maxHeight="145.4" minHeight="33.20000000000001" prefHeight="33.20000000000001" />
+    <RowConstraints maxHeight="158.39999237060545" minHeight="43.0" prefHeight="43.0" />
+    <RowConstraints maxHeight="159.8" minHeight="65.0" prefHeight="117.60000000000001" />
+    <RowConstraints maxHeight="172.59999999999997" minHeight="58.0" prefHeight="64.19999999999999" />
+    <RowConstraints maxHeight="93.80000000000001" minHeight="37.60000000000002" prefHeight="83.40000000000003" />
+    <RowConstraints maxHeight="54.60000000000002" minHeight="16.0" prefHeight="46.60000000000002" />
     <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
     <RowConstraints />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
