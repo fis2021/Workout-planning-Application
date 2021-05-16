@@ -31,6 +31,14 @@ public class ProgramName {
 
     }
 
+    public String getCoach() {
+        return coach;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
     public int getCounter() {
         return counter;
     }

@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #9f6060;" xmlns="http://javafx.com/javafx/11.0.1">
 
     <children>
-        <BorderPane layoutX="238.0" layoutY="147.0" prefHeight="370.0" prefWidth="734.0">
+        <BorderPane layoutX="94.0" layoutY="10.0" prefHeight="529.0" prefWidth="925.0">
             <padding>
                 <Insets bottom="50.0" left="50.0" right="20.0" top="30.0" />
             </padding>
@@ -22,11 +22,13 @@
                 </Text>
             </top>
             <center>
-                <TableView fx:id="programTable" prefHeight="208.0" prefWidth="578.0" BorderPane.alignment="CENTER">
+                <TableView fx:id="programTable" prefHeight="416.0" prefWidth="865.0" BorderPane.alignment="CENTER">
                     <columns>
                         <TableColumn fx:id="programNameColumn" prefWidth="273.60000002384186" text="Name" />
                         <TableColumn fx:id="intensityColumn" prefWidth="224.0" text="Intensity" />
                         <TableColumn fx:id="programDurationColumn" prefWidth="114.19998168945312" text="Duration" />
+                        <TableColumn fx:id="coachColumn" prefWidth="114.19998168945312" text="Coach" />
+                        <TableColumn fx:id="linkColumn" prefWidth="114.19998168945312" text="Link" />
                     </columns>
                 </TableView>
             </center>

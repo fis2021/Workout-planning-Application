@@ -12,6 +12,7 @@ package org.loose.fis.sre.controllers;
         import org.loose.fis.sre.exceptions.ProgramAlreadyExistsException;
         import org.loose.fis.sre.model.ProgramName;
         import org.loose.fis.sre.Main;
+        import org.loose.fis.sre.model.User;
         import org.loose.fis.sre.services.ProgramService;
         import static org.loose.fis.sre.services.ProgramService.addName;
         import static org.loose.fis.sre.services.ProgramService.checkNameDoesNotAlreadyExist;
@@ -39,7 +40,7 @@ public class AddProgramsController {
         try
         {
             ProgramService.checkNameDoesNotAlreadyExist(nameField.getText());
-            ProgramService.addName(nameField.getText(), intensityField.getText(), durationField.getText(),coachField.getText(),linkField.getText());
+            ProgramService.addName(nameField.getText(), intensityField.getText(), durationField.getText(), User.getCurrentUser(),linkField.getText());
 
         }catch (Exception e)
         {

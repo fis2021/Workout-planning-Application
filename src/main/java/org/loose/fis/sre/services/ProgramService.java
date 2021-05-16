@@ -44,9 +44,11 @@ public class ProgramService {
         }
     }
 
-    public static void clearProgram(String name, String intensity,String duration){
+    public static void clearProgram(String name, String intensity,String duration,String coach,String link){
         for(ProgramName p:programNameRepository.find()) {
-            if(p.getName()!=null && p.getName().equals(name) && p.getIntensity().equals(intensity) && p.getDuration().equals(duration)) {
+            if(p.getName()!=null && p.getName().equals(name) && p.getIntensity().equals(intensity)
+                    && p.getDuration().equals(duration) && p.getCoach().equals(coach) && p.getLink().equals(link) )
+            {
                 programNameRepository.remove(p);
                 break;
             }
