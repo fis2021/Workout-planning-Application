@@ -6,11 +6,13 @@ import org.loose.fis.sre.exceptions.AccException;
 import org.loose.fis.sre.exceptions.IncorrectPassException;
 import org.loose.fis.sre.exceptions.UsernameAlreadyExistsException;
 import org.loose.fis.sre.exceptions.UsernameDoesntExistException;
+import org.loose.fis.sre.model.ProgramName;
 import org.loose.fis.sre.model.User;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 
@@ -72,5 +74,24 @@ public class UserService {
             }
         }
         throw new UsernameDoesntExistException(username);
+    }
+
+    public static void clearClient(String username, String password){
+        for(User u:userRepository.find()) {
+            if(u.getUsername()!=null && u.getUsername().equals(username) && u.getPassword().equals(password))
+            {
+                userRepository.remove(u);
+                break;
+            }
+        }
+    }
+
+    public static ArrayList<User> clientNames() {
+        ArrayList<User> list = new ArrayList<>();
+        for(User client : userRepository.find()) {
+            if(client.getRole().equalsIgnoreCase("Client"))
+            list.add(client);
+        }
+        return list;
     }
 }
