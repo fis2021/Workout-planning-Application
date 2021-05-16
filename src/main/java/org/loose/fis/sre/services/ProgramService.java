@@ -100,12 +100,15 @@ public class ProgramService {
         return -1;
     }
 
-    /*public static ArrayList<String> clientPrograms(String name) {
-        ArrayList<String> list = new ArrayList<>();
+    public static ArrayList<ProgramName> clientPrograms(String name) {
+        ArrayList<ProgramName> list = new ArrayList<>();
         for(ProgramName program : programNameRepository.find()) {
-            if (ProgramService.findClient(program,name))
+            if (ProgramService.findClient(program,name)>-1){
+                list.add(program);
+            }
+
         }
         return list;
-    }*/
+    }
 
 }

@@ -23,12 +23,17 @@ public class ClientVPController {
     private TableColumn <ProgramName,String>  colintensity;
     @FXML
     private TableColumn <ProgramName,String> colduration;
+    @FXML
+    private TableColumn <ProgramName,String> colcoach;
+    @FXML
+    private TableColumn <ProgramName,String> collink;
 
     public void initialize(){
         colname.setCellValueFactory(new PropertyValueFactory<>("name"));
         colintensity.setCellValueFactory(new PropertyValueFactory<>("intensity"));
         colduration.setCellValueFactory(new PropertyValueFactory<>("duration"));
-
+        colcoach.setCellValueFactory(new PropertyValueFactory<>("coach"));
+        collink.setCellValueFactory(new PropertyValueFactory<>("link"));
         table.setItems(every);
     }
 

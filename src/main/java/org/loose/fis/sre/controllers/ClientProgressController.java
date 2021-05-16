@@ -8,7 +8,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.loose.fis.sre.Main;
 import org.loose.fis.sre.model.ProgramName;
+import org.loose.fis.sre.model.User;
 import org.loose.fis.sre.services.ProgramService;
+import org.loose.fis.sre.services.UserService;
 
 
 import java.io.IOException;
@@ -23,17 +25,17 @@ public class ClientProgressController {
     private TableColumn <ProgramName,String> columnname;
     @FXML
     private TableColumn <ProgramName,String>  columnintensity;
-    @FXML
-    private TableColumn <ProgramName,String>  columnprogress;
+
 
     public void initialize(){
         columnname.setCellValueFactory(new PropertyValueFactory<>("name"));
         columnintensity.setCellValueFactory(new PropertyValueFactory<>("intensity"));
-        columnprogress.setCellValueFactory(new PropertyValueFactory<>("duration"));
+
+
         table.setItems(show);
     }
 
-    private ObservableList<ProgramName> show = FXCollections.observableArrayList(ProgramService.programNames());
+    private ObservableList<ProgramName> show = FXCollections.observableArrayList(ProgramService.clientPrograms(User.getCurrentUser()));
 
     /*public List<String> getProgramNamesFromTable() {
         return table.getItems();
